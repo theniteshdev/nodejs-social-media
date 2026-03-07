@@ -10,3 +10,6 @@ technologies used for login, signup
 - mongoose
 - mongoDB
 - dotenv
+
+
+project done. 
