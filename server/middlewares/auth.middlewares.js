@@ -3,17 +3,18 @@ import variable from "../conf/variable.js"
 import ApiResponse from "../utils/apiResponse.js";
 function authorizationMiddleware(req, res, next) {
     try {
-        const token = req.cookies.token;
+        const token = req.body.token;
         if (!token) {
-            ApiResponse(res, 401, false, "Please login first !!", "unauthorized access");
+            return ApiResponse(res, 401, false, "Please login first !!", "unauthorized access");
         }
         const decoded = jwt.verify(token, variable.secret);
         req.user = decoded;
         next();
 
     } catch (error) {
+        console.log(error.name)
         console.log("error in authorization function")
-        ApiResponse(res, 500, false, "internal server error !!", "server error",)
+        return ApiResponse(res, 500, false, error.name == "TokenExpiredError" ? "Token Expired!!" : "internal server error !! ? ", null)
     }
 };
 
