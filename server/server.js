@@ -6,6 +6,7 @@ import cookieParser from 'cookie-parser';
 import routes from './routes/auth.route.js';
 import UserRoute from './routes/user.route.js';
 import authorizationMiddleware from "./middlewares/auth.middlewares.js"
+import { UserModel } from './models/user.model.js';
 // console.clear();
 const server = express();
 server.use((req, res, next) => {
@@ -23,6 +24,23 @@ server.get('/', function (req, res) {
         message: 'Welcome!',
     });
 });
+
+server.post("/me", authorizationMiddleware, async (req, res) => {
+    const user = await UserModel.findById(req.user.id)
+    console.log(user);
+    res.json({
+        id: user._id,
+        username: user.username,
+        email: user.email,
+        age: user.age,
+        posts: user.posts,
+        followers: user.followers,
+        following: user.following,
+        createdAt: user.createdAt,
+        updatedAt: user.updatedAt,
+        success: true
+    });
+})
 
 server.use("/auth", routes)
 server.use("/user", authorizationMiddleware, UserRoute)
