@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#login-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 330px;
+}
+
+#login-form div {
+    width: 100%;
+}
+
+#login-form input {
+    outline: none;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 18px;
+    margin-top: 8px;
+    width: 100%;
+}
+
+#login-btn {
+    width: 100%;
+    font-size: 1rem;
+}
+
+#login-msg {
+    margin-top: 18px;
+    color: red;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: all 200ms ease-in-out;
+}
+
+#dont-have-account {
+    background-color: white;
+    font-weight: 400;
+    font-size: 1.2rem;
+    width: 100%;
+}
