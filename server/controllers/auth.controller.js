@@ -54,7 +54,7 @@ const login = async (req, res) => {
                 false,
                 "Invalid username or password",
                 "invalid credentials",
-                "from password"
+                null
             );
         };
         const token = jwt.sign(
@@ -63,31 +63,20 @@ const login = async (req, res) => {
             { expiresIn: "5m" }
         );
 
-        res.cookie("token", token, {
-            httpOnly: true,
-            secure: process.env.NODE_ENV === "production",
-            sameSite: "lax",
-            maxAge: 5 * 60 * 1000 // 5 minutes
-        });
-
-        const dataUserToSend = {
-            username: user.username,
-            email: user.email,
-            age: user.age,
-            posts: user.posts,
-            followers: user.followers,
-            following: user.following,
-            createdAt: user.createdAt,
-            updatedAt: user.updatedAt,
-        }
-
+        res.cookie("token", token);
+        // {
+        //     httpOnly: true,
+        //         secure: false,
+        //             sameSite: "lax",
+        //                 maxAge: 5 * 60 * 1000 // 5 minutes
+        // }
         return ApiResponse(
             res,
             200,
             true,
             "User logged in successfully",
             "no errors",
-            dataUserToSend
+            token
         );
     } catch (error) {
         console.error(error);
