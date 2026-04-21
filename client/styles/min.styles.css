@@ -12,3 +12,27 @@ body {
     height: 100vh;
     width: 100%;
 }
+
+button {
+    background-color: wheat;
+    color: black;
+    padding: 12px 32px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+    margin-top: 20px;
+    border-radius: 1000px;
+}
+
+button:hover {
+    background-color: white;
+    transform: translate(0, 2px);
+    scale: 1.07;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 200ms ease-in-out;
+}
