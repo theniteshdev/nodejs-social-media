@@ -149,7 +149,20 @@ const signup = async (req, res) => {
         );
 
     } catch (error) {
-        console.error(error);
+        if (error.name == "ValidationError") {
+            const errorFields = {};
+            for (let field in error.errors) {
+                errorFields[error.errors[field]] = error.errors[field].message;
+            }
+            return ApiResponse(
+                res,
+                400,
+                false,
+                errorFields,
+                "Validation Error !"
+            );
+        }
+        // else
         return ApiResponse(
             res,
             500,
