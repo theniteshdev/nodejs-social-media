@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 5rem;
+}
+
+h4 {
+    font-size: 1.7rem;
+    margin-block: 8px;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.main a {
+    background-color: #ccc;
+    color: black;
+    padding: 4px 18px;
+    border-radius: 4px;
+    font-size: 1.1rem;
+}
+
+.links {
+    display: flex;
+    gap: 12px;
+    font-weight: 400
+}
+
+.links>a:hover {
+    scale: 1.07;
+    color: wheat;
+}
