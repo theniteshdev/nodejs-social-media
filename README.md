@@ -1,53 +1,20 @@
-# Social Media App (Full Stack Learning Project)
+# Social Media 
+<img width="201" height="185" alt="image" src="https://github.com/user-attachments/assets/980c6036-41fc-47ff-bd31-f3bffcd8bbc9" />
 
 ## Overview
-
-This is a simple full stack social media project built to practice backend and frontend development. The application allows users to create accounts, log in, and interact with posts through features like follow, like, and dislike.
-
-The backend is fully implemented, and the frontend is currently in progress using HTML, CSS, and vanilla JavaScript.
+This is a simple stack social media project built to practice backend. The application allows users to create accounts, log in, and interact with posts through features like follow, like, and dislike.
 
 ## Features
-
 * User authentication (signup, login)
 * Follow and unfollow users
 * Create posts
 * Like and dislike posts
 * Token-based authentication using cookies
 
-## Technologies Used
-
-### Backend
-
-* Node.js
-* Express
-* MongoDB
-* Mongoose
-* JSON Web Token (JWT)
-* cookie-parser
-* dotenv
-
-### Frontend (in progress)
-
-* HTML
-* CSS
-* Vanilla JavaScript
-
-## Project Structure
-
-* Backend handles API, authentication, and database operations
-* Frontend consumes APIs and renders UI
-
 ## Purpose
-
 This project is built as a learning exercise to understand how a social media application works at a fundamental level, especially focusing on backend logic and API design.
 
-## Status
-
-* Backend: Completed
-* Frontend: In progress
-
 ## Setup Instructions
-
 1. Clone the repository
 2. Install dependencies:
 
@@ -61,6 +28,7 @@ This project is built as a learning exercise to understand how a social media ap
    npm start
    ```
 
-## Notes
+## Note
+This is a beginner-friendly project where I focused on learning core concepts rather than production-level implementation.
 
-This is a beginner-friendly project focused on learning core concepts rather than production-level implementation.
+-[theniteshdev](http://x.com/@theniteshdev)
